@@ -4,6 +4,7 @@
 
 ***
 “炼丹炉”联邦学习web平台 **v1** [cqupt-lcy/easyfl-react: react+fl](https://github.com/cqupt-lcy/easyfl-react)
+“炼丹炉”联邦学习web平台 **v2** https://github.com/cqupt-lcy/easyfl-v2/tree/main
 
 ## **Update Logs：**
 
