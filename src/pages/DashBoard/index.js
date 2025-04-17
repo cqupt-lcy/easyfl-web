@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useSelector } from 'react-redux'
-import { transformResultsToChartData } from '../../tools/useChartDataIncremental'
+import { transformResultsToChartData } from '../../hooks/useChartDataIncremental.js'
 import DashBoardCharts from '../../components/DashBoardCharts'
 import { useMemo } from 'react'
 import TaskSelector from '../../components/TaskSelector.js'
 import HistoryLogs from '../../components/HistoryLogs/index.js'
 import { useDispatch } from 'react-redux'
+import { throttle } from '../../utils/throttle.js'
 export default function DashBoard() {
   const dispatch = useDispatch()
   const tasks = useSelector(state => state.tasks.tasks)
@@ -16,11 +17,14 @@ export default function DashBoard() {
     return prev
   }, [])
   const selectedTasks = useSelector(state => state.selectedTasks.selectedTasks)
-  const chartData = useMemo(() => {
-    return transformResultsToChartData({ results, tasks, taskNames })
-  }, [results, tasks, taskNames])
-
-
+  const throttledTransformFunc = useRef(
+    throttle(transformResultsToChartData,5000)
+  ).current
+  const chartData = throttledTransformFunc({results,tasks,taskNames})
+  // const chartData = useMemo(()=>{
+  //   return transformResultsToChartData({ results, tasks, taskNames })
+  // },[results])
+  // const chartData = transformResultsToChartData({ results, tasks, taskNames })
   return (
     <div style={{
       marginLeft:'20px'

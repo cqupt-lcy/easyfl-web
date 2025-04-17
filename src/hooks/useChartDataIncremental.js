@@ -17,6 +17,7 @@ export function transformResultsToChartData({results, tasks, taskNames}) {
       roundEntry[task.name] = testAcc // 用 name 做图表 key
     }
   }
-
+  console.log(`转换函数执行了`);
+  
   return Array.from(roundMap.values()).sort((a, b) => a.round - b.round)
 }

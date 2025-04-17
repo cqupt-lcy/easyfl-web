@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Avatar, Divider, List, Skeleton, message } from 'antd';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { request } from '../../api/axios/request';
-import GetTaskNameById from '../../tools/useGetTaskNameById';
+import GetTaskNameById from '../../hooks/useGetTaskNameById';
 import { useSelector } from 'react-redux';
 const App = () => {
   const [loading, setLoading] = useState(false);
