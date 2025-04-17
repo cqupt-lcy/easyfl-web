@@ -4,7 +4,7 @@
 为了⽅便进⾏联邦学习相关的科研实验，我开发了⼀个基于FLGo开源框架（[WwZzz/easyFL: An experimental platform for federated learning.](https://github.com/WwZzz/easyFL)）的web平台，可以进⾏联邦学习训练的控制、实时监测训练过程以及查看实验结果。
 
 ***
-“炼丹炉”联邦学习web平台 **v1** [cqupt-lcy/easyfl-react: react+fl](https://github.com/cqupt-lcy/easyfl-react)
+![easyfl-web](README.assets/easyfl-web.png)
 
 ## **Update Logs：**
 
@@ -12,6 +12,10 @@
 使用Redux统一管理状态
 增加任务导航栏功能，支持新增任务，删除任务，任务重命名
 支持多任务同时进行
+
+添加DashBoard，多任务同时进行实验并可视化
+
+增加DashBoard筛选器，可以手动选择显示的任务
 
 ## TODOS
 
