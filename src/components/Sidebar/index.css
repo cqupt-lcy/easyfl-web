@@ -1,0 +1,95 @@
+.sidebar {
+  width: 150px;
+  min-width: 150px;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.add-task-btn {
+  background-color: #1890ff;
+  border: none;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.add-task-btn:hover {
+  background-color: #40a9ff;
+}
+
+.task-list {
+  margin-top: 16px;
+  flex: 1; /* 占据剩余空间，可滚动 */
+  overflow-y: auto;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.task-link {
+  text-decoration: none;
+  color: #333;
+  flex: 1;
+  padding: 8px;
+  transition: background-color 0.2s;
+  border-radius: 4px;
+}
+
+.task-link:hover {
+  background-color: #f0f0f0;
+}
+
+.del-btn {
+  background-color: transparent;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 8px;
+  padding: 4px;
+}
+
+.del-btn:hover {
+  color: #ff4d4f;
+}
+
+hr {
+  margin: 8px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.sidebar-menu .menu-item {
+  display: block;
+  padding: 8px 0;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.sidebar-menu .menu-item:hover {
+  color: #1890ff;
+}
+a.active{
+  background-color: #ddd;
+}
